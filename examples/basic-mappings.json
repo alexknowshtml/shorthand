@@ -1,27 +1,27 @@
 {
-  "deploy": {
-    "triggers": ["deploy", "ship it", "push to production", "deploy to prod"],
-    "command": "/deploy",
-    "description": "Deploy to production"
+  "schedule_meeting": {
+    "triggers": ["schedule a meeting", "set up a meeting with", "book a meeting with", "schedule a call with"],
+    "command": "/schedule",
+    "description": "Schedule a meeting on your preferred calendar"
   },
-  "run_tests": {
-    "triggers": ["run tests", "test it", "run the tests"],
-    "command": "/test",
-    "description": "Run test suite"
+  "check_email": {
+    "triggers": ["check email", "check my email", "inbox", "show inbox", "email overview"],
+    "command": "/email-overview",
+    "description": "View email inbox summary"
   },
-  "check_status": {
-    "triggers": ["status", "what's the status", "show status", "project status"],
-    "command": "/status",
-    "description": "Show project status overview"
+  "meeting_prep": {
+    "triggers": ["prep for meeting", "meeting prep", "prep for my call with", "get ready for meeting"],
+    "command": "/prep-meeting",
+    "description": "Prepare context for an upcoming meeting"
   },
-  "create_pr": {
-    "triggers": ["create a pr", "open a pr", "make a pull request", "submit pr"],
-    "command": "/pr",
-    "description": "Create a pull request"
+  "add_reminder": {
+    "triggers": ["remind me to", "set a reminder", "don't let me forget to"],
+    "command": "/remind",
+    "description": "Create a reminder"
   },
-  "code_review": {
-    "triggers": ["review this", "code review", "review my changes"],
-    "command": "/review",
-    "description": "Review code changes"
+  "daily_overview": {
+    "triggers": ["what's on my plate", "what are my priorities", "what's today look like"],
+    "command": "/overview",
+    "description": "Show daily priorities and agenda"
   }
 }

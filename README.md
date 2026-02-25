@@ -4,7 +4,7 @@
 
 Shorthand scans your Claude Code commands and skills, mines your session history, and builds a natural language routing layer — so you stop typing slash commands and start talking.
 
-Instead of remembering `/book-room` when you want to reserve a conference room, just say "book the boardroom for Thursday." Shorthand maps your natural language to the right command automatically.
+Instead of typing `/schedule --date=thursday --time=2pm --attendee=sarah@company.com`, just say "schedule a meeting with Sarah for Thursday at 2pm." Shorthand maps your natural language to the right command automatically.
 
 ## How It Works
 
@@ -13,7 +13,7 @@ Shorthand adds two things to your Claude Code project:
 1. **A routing snippet** in your `CLAUDE.md` that tells Claude to check intent mappings before processing each message
 2. **A JSON file** (`intent-mappings.json`) that maps natural language triggers to your existing commands and skills
 
-When you type "check my email," Claude matches it against your mappings and invokes `/email-overview` — without you ever typing a slash.
+When you type "check my email," Claude matches it against your mappings and invokes `/email-overview`. When you say "prep for my 2pm with Sarah," it runs `/prep-meeting` with the right context. No slash commands required.
 
 ## Quick Start
 
@@ -57,10 +57,10 @@ Edit `.claude/data/intent-mappings.json` directly:
 
 ```json
 {
-  "deploy": {
-    "triggers": ["deploy", "ship it", "push to production"],
-    "command": "/deploy",
-    "description": "Deploy to production"
+  "schedule_meeting": {
+    "triggers": ["schedule a meeting", "set up a meeting with", "book a call with"],
+    "command": "/schedule",
+    "description": "Schedule a meeting on your preferred calendar"
   }
 }
 ```
@@ -133,7 +133,7 @@ Shorthand is the simplest starting point. You can graduate to a hook-based syste
 
 Built by [Alex Hillman](https://github.com/alexknowshtml) and Andy (his Claude Code assistant).
 
-Born from a real workflow: booking conference rooms, creating invoices, and discovering that natural language is faster than slash commands for the things you do most often.
+Born from a real workflow: scheduling meetings, managing email, invoicing clients, and discovering that natural language is faster than slash commands for the things you do most often.
 
 ## License
 
