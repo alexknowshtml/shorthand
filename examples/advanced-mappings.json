@@ -1,0 +1,94 @@
+{
+  "_comment": "Advanced example showing all mapping features: commands, skills, URL patterns, conditional routing, and conflict management.",
+
+  "deploy_production": {
+    "triggers": ["deploy to prod", "ship to production", "deploy production"],
+    "command": "/deploy",
+    "args": "production",
+    "description": "Deploy to production environment"
+  },
+  "deploy_staging": {
+    "triggers": ["deploy to staging", "ship to staging", "deploy staging"],
+    "command": "/deploy",
+    "args": "staging",
+    "description": "Deploy to staging environment — note how triggers disambiguate from production deploy"
+  },
+
+  "email_check": {
+    "triggers": ["check email", "inbox", "show inbox", "email overview"],
+    "command": "/email-overview",
+    "description": "View email inbox summary"
+  },
+  "email_filter": {
+    "triggers": ["filter email", "run email filters", "clean up inbox"],
+    "command": "/email-filter",
+    "description": "Run email filters"
+  },
+  "email_compose": {
+    "triggers": ["compose email", "write an email to", "draft email to", "send email to"],
+    "command": "/compose",
+    "description": "Compose a new email"
+  },
+
+  "meeting_prep": {
+    "triggers": [
+      "prep for meeting", "meeting prep", "prepare for meeting",
+      "prep for the call", "get ready for meeting"
+    ],
+    "command": "/prep-meeting",
+    "description": "Prepare context for an upcoming meeting"
+  },
+  "meeting_notes": {
+    "triggers": ["process meeting notes", "extract action items", "parse meeting notes"],
+    "command": "/process-meeting-notes",
+    "description": "Process meeting notes into action items"
+  },
+
+  "book_room": {
+    "triggers": ["book a room", "reserve a room", "book me a room", "I need a room"],
+    "command": "/book-room",
+    "description": "Book a meeting room — note: uses 'book/reserve a room' to avoid conflict with room-rental"
+  },
+  "room_rental": {
+    "triggers": [
+      "room rental for", "invoice for room rental",
+      "boardroom rental for", "rent the boardroom to"
+    ],
+    "command": "/room-rental",
+    "description": "Full rental workflow with billing — note: uses 'rental/rent' + person to disambiguate from booking"
+  },
+
+  "session_resume": {
+    "triggers": ["where did we leave off", "what were we working on", "continue from last"],
+    "skill": "sessions-api",
+    "description": "Skill-based intent: routes to a skill instead of a command"
+  },
+
+  "instagram_download": {
+    "triggers": [],
+    "url_patterns": [
+      "instagram.com/stories/",
+      "instagram.com/reel/",
+      "instagram.com/p/"
+    ],
+    "skill": "instagram-download",
+    "description": "URL-based intent: triggers when user shares an Instagram URL, no keyword triggers needed"
+  },
+
+  "end_of_day": {
+    "triggers": ["end of day", "eod", "end my day"],
+    "command": "/eod",
+    "description": "End of day routine"
+  },
+  "pause_session": {
+    "triggers": ["pause", "save my work", "wrap up for now"],
+    "command": "/pause",
+    "description": "Pause current session"
+  },
+  "wrap_ambiguous": {
+    "triggers": ["wrap up", "done for today", "call it a day"],
+    "command": "smart_eod_detection",
+    "conditions": "time_aware_routing",
+    "description": "Conditional routing: before 4pm routes to /pause, after 4pm asks user to choose between /eod and /pause"
+  }
+}

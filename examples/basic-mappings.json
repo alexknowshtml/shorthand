@@ -1,0 +1,27 @@
+{
+  "deploy": {
+    "triggers": ["deploy", "ship it", "push to production", "deploy to prod"],
+    "command": "/deploy",
+    "description": "Deploy to production"
+  },
+  "run_tests": {
+    "triggers": ["run tests", "test it", "run the tests"],
+    "command": "/test",
+    "description": "Run test suite"
+  },
+  "check_status": {
+    "triggers": ["status", "what's the status", "show status", "project status"],
+    "command": "/status",
+    "description": "Show project status overview"
+  },
+  "create_pr": {
+    "triggers": ["create a pr", "open a pr", "make a pull request", "submit pr"],
+    "command": "/pr",
+    "description": "Create a pull request"
+  },
+  "code_review": {
+    "triggers": ["review this", "code review", "review my changes"],
+    "command": "/review",
+    "description": "Review code changes"
+  }
+}
