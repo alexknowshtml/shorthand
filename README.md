@@ -7,11 +7,13 @@ Shorthand scans your Claude Code commands and skills, mines your session history
 Instead of remembering that `/create-invoice` is the command you need, just say "invoice Acme for $450 for March consulting." Shorthand figures out which command to run.
 
 More examples:
-- **"schedule a meeting with Sarah for Thursday at 2pm"** instead of `/schedule`
-- **"check my email"** instead of `/email-overview`
-- **"prep for my 2pm with Sarah"** instead of `/prep-meeting`
-- **"remind me to follow up with John on Tuesday"** instead of `/remind`
-- **"what's on my plate today"** instead of `/overview`
+- **"check my email"** routes to your work inbox, not your personal one
+- **"schedule a client call for Thursday"** puts it on your business calendar, not your personal one
+- **"prep for my 2pm with Sarah"** pulls context from the right CRM, project notes, and past conversations
+- **"remind me to follow up with John on Tuesday"** creates the reminder in your preferred system
+- **"what's on my plate today"** shows priorities from the tools you actually use
+
+The routing isn't generic — it's *yours*. Your commands already know which inbox, which calendar, which tools. Shorthand just lets you reach them by talking naturally.
 
 ## Why Not Just Talk to Claude?
 
