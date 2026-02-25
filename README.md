@@ -4,13 +4,13 @@
 
 Shorthand scans your Claude Code commands and skills, mines your session history, and builds a natural language routing layer — so you stop typing slash commands and start talking.
 
-Instead of typing `/create-invoice --customer=acme --amount=450 --description="March consulting"`, just say "invoice Acme for $450 for March consulting." Shorthand maps your natural language to the right command automatically.
+Instead of remembering that `/create-invoice` is the command you need, just say "invoice Acme for $450 for March consulting." Shorthand figures out which command to run.
 
 More examples:
-- **"schedule a meeting with Sarah for Thursday at 2pm"** instead of `/schedule --date=thursday --time=2pm --attendee=sarah@company.com`
+- **"schedule a meeting with Sarah for Thursday at 2pm"** instead of `/schedule`
 - **"check my email"** instead of `/email-overview`
-- **"prep for my 2pm with Sarah"** instead of `/prep-meeting --contact=sarah`
-- **"remind me to follow up with John on Tuesday"** instead of `/remind --date=tuesday --text="follow up with John"`
+- **"prep for my 2pm with Sarah"** instead of `/prep-meeting`
+- **"remind me to follow up with John on Tuesday"** instead of `/remind`
 - **"what's on my plate today"** instead of `/overview`
 
 ## How It Works
