@@ -13,6 +13,10 @@ More examples:
 - **"remind me to follow up with John on Tuesday"** instead of `/remind`
 - **"what's on my plate today"** instead of `/overview`
 
+## Why Not Just Talk to Claude?
+
+Claude already does this natively — it can often figure out that "check my email" means you want `/email-overview`. But it's not always consistent. Sometimes it catches the intent, sometimes it doesn't, and sometimes it routes to the wrong command. Shorthand trades a small amount of token efficiency for reliable, repeatable routing. If consistency matters more to you than saving ~5,000 tokens per session, this is for you.
+
 ## How It Works
 
 Shorthand adds two things to your Claude Code project:
